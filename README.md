@@ -63,6 +63,30 @@ Resources:
 https://github.com/seccomp/libseccomp
 https://github.com/gebi/teach-seccomp/blob/master/step-2/example.c
 
+### Cross-Platform Builds with Guix
+
+Skills: Guile
+
+Description:
+...
+
+Resources:
+https://github.com/metacall/distributable/blob/f14cbdcfe3bcb85e0331172e0dbb512e2f21350a/Makefile#L31
+https://github.com/metacall/distributable/blob/f14cbdcfe3bcb85e0331172e0dbb512e2f21350a/scripts/build.sh#L23
+https://guix.gnu.org/manual/en/html_node/Additional-Build-Options.html
+https://andrewkelley.me/post/zig-cc-powerful-drop-in-replacement-gcc-clang.html
+
+### Packaging NetCore with Guix (NonGuix)
+
+Skills: Guile
+
+Description:
+...
+
+Resources:
+https://github.com/metacall/distributable/issues/1
+https://gitlab.com/nonguix/nonguix
+
 ## Find Us
 
 Telegram:
