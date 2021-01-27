@@ -67,17 +67,19 @@ Resources:
  - Formality JavaScript Backend: https://github.com/moonad/Formality/tree/master/bin/js
  - MetaCall TypeScript Loader (can be used as example to implement the Formality Loader): https://github.com/metacall/core/tree/develop/source/loaders/ts_loader
 
-### CLI Security Through `seccomp`
+### CLI Security Through `seccomp` (Sandboxing)
 
 Skills: C/C++
 
 Description:
-...
+Modern runtimes like Deno provide a command line interface for allowing / restricting capabilities and sandbox the execution of the code. We want to provide a similar approach but based on `libseccomp`. This approach will provide to MetaCall CLI a standard system for filtering system calls independently of the language being executed. This will provide a safe sandboxing primitives that can be shared between runtimes at system call level. As a result MetaCall will be able to be executed safely without need to use Docker or any other virtualization tool.
 
 Resources:
  - `libseccomp` GitHub Repository: https://github.com/seccomp/libseccomp
  - Example of usage for `libseccomp`: https://github.com/gebi/teach-seccomp/blob/master/step-2/example.c
  - Example of CMake find script for `libseccomp`: https://webkit-search.igalia.com/webkit/source/Source/cmake/FindLibseccomp.cmake
+ - MetaCall CLI Source: https://github.com/metacall/core/tree/develop/source/cli/metacallcli
+ - Deno Permission List: https://deno.land/manual/getting_started/permissions#permissions-list
 
 ### Cross-Platform Builds with Guix
 
