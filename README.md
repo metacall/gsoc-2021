@@ -102,7 +102,17 @@ Resources:
  - Existing issue related to the task in `metacall/distributable`: https://github.com/metacall/distributable/issues/1
  - NonGuix GitLab Repository: https://gitlab.com/nonguix/nonguix
 
-### 
+### Pyston Loader with Benchmarks against CPython (Python Loader)
+
+Skills: C++
+
+Description:
+Pyston is an experimental JIT for Python which follows the same C API as CPython. Implementing it in MetaCall can provide higher performance which can benefit in faster execution of code, which is very important on enviroments like Cloud Computing or FaaS. The task will be to implement support to Pyston based on the Python Loader, and create benchmarks to document the performance improvements.
+
+Resources:
+ - Pyston GitHub Repository: https://github.com/pyston/pyston
+ - Pyston Install Documentation: https://pyston.readthedocs.io/en/stable/INSTALLING/
+ - Example of MetaCall Benchmarks for Python Loader and Python C API: https://github.com/metacall/core/tree/develop/source/benchmarks/metacall_py_call_bench and https://github.com/metacall/core/tree/develop/source/benchmarks/metacall_py_c_api_bench
 
 ## Find Us
 
