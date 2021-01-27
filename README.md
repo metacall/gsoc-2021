@@ -5,7 +5,7 @@ List of project ideas for students applying to the Google Summer of Code program
 
 Until March 9, 2021 we won't know if we will have been accepted to be part of GSoC.
 
-Please always refer to the official timeline: https://summerofcode.withgoogle.com/how-it-works/#timeline  
+Please always refer to the [official timeline](https://summerofcode.withgoogle.com/how-it-works/#timeline). 
   
 ## Application Process
 
@@ -40,7 +40,8 @@ You can also ask for a review anytime to the community or mentor candidates befo
 
 Skills: C, C++ (optional) and Julia (at least its type system)
 
-Description: Julia is a modern programming language which features performance as fast as C while still being adequate to the scientific community rapid prototyping needs. Julia has a C api that Metacall could use to connect it with other languages than C/C++ with less effort.
+Description:
+Julia is a modern programming language which features performance as fast as C while still being adequate to the scientific community rapid prototyping needs. Julia has a C api that Metacall could use to connect it with other languages than C/C++ with less effort.
 
 Resources:
  - Julia Embedding Manual: https://docs.julialang.org/en/v1/manual/embedding/
