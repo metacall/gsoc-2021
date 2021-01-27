@@ -39,8 +39,8 @@ Description:
 ...
 
 Resources:
-https://docs.julialang.org/en/v1/manual/embedding/
-https://github.com/JuliaInterop/libcxxwrap-julia/blob/master/FindJulia.cmake
+ - Julia Embedding Manual: https://docs.julialang.org/en/v1/manual/embedding/
+ - Julia Dependency in CMake: https://github.com/JuliaInterop/libcxxwrap-julia/blob/master/FindJulia.cmake
 
 
 ### Embedding LLVM (LLVM Loader)
@@ -51,9 +51,9 @@ Description:
 ...
 
 Resources:
-https://llvm.org/docs/CMake.html#embedding-llvm-in-your-project
-https://github.com/llvm/llvm-project/blob/main/llvm/tools/lli/lli.cpp
-https://github.com/mull-project/mull/blob/35f83655b04341b6260c5358168c4ac2da7bd86d/lib/Rust/RustTestFinder.cpp#L108
+ - LLVM Embedding Manual: https://llvm.org/docs/CMake.html#embedding-llvm-in-your-project
+ - LLVM Interpreter Example for Dynamic Compilation: https://github.com/llvm/llvm-project/blob/main/llvm/tools/lli/lli.cpp
+ - How to list functions in LLVM (for introspection): https://github.com/mull-project/mull/blob/35f83655b04341b6260c5358168c4ac2da7bd86d/lib/Rust/RustTestFinder.cpp#L108
 
 ### Embedding Formality Proof Assistant (Formality Loader)
 
@@ -63,8 +63,9 @@ Description:
 ...
 
 Resources:
-https://github.com/moonad/Formality
-https://github.com/moonad/Formality/tree/master/bin/js
+ - Formality GitHub Repository: https://github.com/moonad/Formality
+ - Formality JavaScript Backend: https://github.com/moonad/Formality/tree/master/bin/js
+ - MetaCall TypeScript Loader (can be used as example to implement the Formality Loader): https://github.com/metacall/core/tree/develop/source/loaders/ts_loader
 
 ### CLI Security Through `seccomp`
 
@@ -74,8 +75,9 @@ Description:
 ...
 
 Resources:
-https://github.com/seccomp/libseccomp
-https://github.com/gebi/teach-seccomp/blob/master/step-2/example.c
+ - `libseccomp` GitHub Repository: https://github.com/seccomp/libseccomp
+ - Example of usage for `libseccomp`: https://github.com/gebi/teach-seccomp/blob/master/step-2/example.c
+ - Example of CMake find script for `libseccomp`: https://webkit-search.igalia.com/webkit/source/Source/cmake/FindLibseccomp.cmake
 
 ### Cross-Platform Builds with Guix
 
@@ -85,10 +87,9 @@ Description:
 ...
 
 Resources:
-https://github.com/metacall/distributable/blob/f14cbdcfe3bcb85e0331172e0dbb512e2f21350a/Makefile#L31
-https://github.com/metacall/distributable/blob/f14cbdcfe3bcb85e0331172e0dbb512e2f21350a/scripts/build.sh#L23
-https://guix.gnu.org/manual/en/html_node/Additional-Build-Options.html
-https://andrewkelley.me/post/zig-cc-powerful-drop-in-replacement-gcc-clang.html
+ - Base implementation of Cross-Platform support in `metacall/distributable`: https://github.com/metacall/distributable/blob/f14cbdcfe3bcb85e0331172e0dbb512e2f21350a/Makefile#L31 and https://github.com/metacall/distributable/blob/f14cbdcfe3bcb85e0331172e0dbb512e2f21350a/scripts/build.sh#L23
+ - Guix Build Options Documentation: https://guix.gnu.org/manual/en/html_node/Additional-Build-Options.html
+ - Cross-compiling with Zig: https://andrewkelley.me/post/zig-cc-powerful-drop-in-replacement-gcc-clang.html
 
 ### Packaging NetCore with Guix (NonGuix)
 
@@ -98,8 +99,10 @@ Description:
 ...
 
 Resources:
-https://github.com/metacall/distributable/issues/1
-https://gitlab.com/nonguix/nonguix
+ - Existing issue related to the task in `metacall/distributable`: https://github.com/metacall/distributable/issues/1
+ - NonGuix GitLab Repository: https://gitlab.com/nonguix/nonguix
+
+### 
 
 ## Find Us
 
