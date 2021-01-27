@@ -11,11 +11,11 @@ Please always refer to the official timeline: https://summerofcode.withgoogle.co
 
 0. Get familiar with GSoC
 
->>First of all, and if you have not done that yet, read the student guide which will allow you to understand all this process and how the program works overall:
+First of all, and if you have not done that yet, read the student guide which will allow you to understand all this process and how the program works overall:
 
->>[What is Google Summer of Code?](https://google.github.io/gsocguides/student/)
+[What is Google Summer of Code?](https://google.github.io/gsocguides/student/)
 
->>Refer to its left side menu to quick access sections that may interest you the most, although we recommend you to read everything.
+Refer to its left side menu to quick access sections that may interest you the most, although we recommend you to read everything.
 
 
 1. Discuss the project idea with the mentor(s)
