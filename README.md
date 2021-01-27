@@ -5,38 +5,42 @@ List of project ideas for students applying to the Google Summer of Code program
 
 Until March 9, 2021 we won't know if we will have been accepted to be part of GSoC.
 
-Please always refer to the official timeline: https://summerofcode.withgoogle.com/how-it-works/#timeline
-
+Please always refer to the official timeline: https://summerofcode.withgoogle.com/how-it-works/#timeline  
+  
 ## Application Process
 
-0. Get familiar with GSoC
+#### 0. Get familiar with GSoC
 
-First of all, and if you have not done that yet, read the student guide which will allow you to understand all this process and how the program works overall:
-
-[What is Google Summer of Code?](https://google.github.io/gsocguides/student/)
-
-Refer to its left side menu to quick access sections that may interest you the most, although we recommend you to read everything.
-
-
-1. Discuss the project idea with the mentor(s)
+First of all, and if you have not done that yet, read [the student guide](https://google.github.io/gsocguides/student/) which will allow you to understand all this process and how the program works overall. Refer to its left side menu to quick access sections that may interest you the most, although we recommend you to read everything.  
+  
+#### 1. Discuss the project idea with the mentor(s)
 
 This is a required step unless you have dived in into the existing codebase and understood everything perfectly (very hard) and the idea you prefer is on the list below.
 
-If your idea is not listed, please discuss it with the mentors in the available matrix, telegram or discord channels. We're always open to new ideas and won't hesitate on choosing them if you demonstrate to be a good candidate!
+If your idea is not listed, please discuss it with the mentors in the available [contact channels](https://github.com/metacall/gsoc-2021#find-us). We're always open to new ideas and won't hesitate on choosing them if you demonstrate to be a good candidate!  
+  
+#### 2. Understand that
 
-2. Fill out the application form
+- You're commiting to a project and we may ask you to publicly publish your weekly progress on it.
+- It's the first year Metacall is joining the GSoC program and we will ask you to give feedback on our mentorship and management continuously.
+- You wholeheartedly agree with the [code of conduct](https://github.com/metacall/core/blob/develop/.github/CODE_OF_CONDUCT.md).
+- You must tell us if there's any proposed idea that you don't think would fit the timeline or could be boring (yes, we're asking for feedback).
+  
+#### 3. Fill out the application form
 
-[Google's guide to Writing a Proposal](https://google.github.io/gsocguides/student/writing-a-proposal)
+You can follow [Google's guide to Writing a Proposal](https://google.github.io/gsocguides/student/writing-a-proposal) as we won't be too harsh on the format and we won't give any template. But hey, we're giving you a starting point!
+
+You can also ask for a review anytime to the community or mentor candidates before the student application deadline. It's much easier if you get feedback early than to wait for the last moment.
+  
 
 ## Project Ideas
 
 
-### Embedding Julia (Julia Loader)
+### Embedding Julia language (Julia Loader)
 
-Skills: C
+Skills: C, C++ (optional) and Julia (at least its type system)
 
-Description:
-...
+Description: Julia is a modern programming language which features performance as fast as C while still being adequate to the scientific community rapid prototyping needs. Julia has a C api that Metacall could use to connect it with other languages than C/C++ with less effort.
 
 Resources:
  - Julia Embedding Manual: https://docs.julialang.org/en/v1/manual/embedding/
