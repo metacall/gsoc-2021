@@ -40,12 +40,29 @@ You can also ask for a review anytime to the community or mentor candidates befo
 
 Skills: C, C++ (optional) and Julia (at least its type system)
 
-Description:
-Julia is a modern programming language which features performance as fast as C while still being adequate to the scientific community rapid prototyping needs. Julia has a C api that Metacall could use to connect it with other languages than C/C++ with less effort.
+Description:  
+Julia is a modern programming language which features performance nearly as fast as C while still being adequate to the scientific community rapid prototyping needs. Julia has a C api that Metacall could use to connect it with other languages than C/C++ with less effort.
 
-Resources:
+Resources: 
  - Julia Embedding Manual: https://docs.julialang.org/en/v1/manual/embedding/
  - Julia Dependency in CMake: https://github.com/JuliaInterop/libcxxwrap-julia/blob/master/FindJulia.cmake
+
+
+### Jupyter Metacall kernel
+
+Skills: C/C++ at least to interact with Metacall core
+
+Description:  
+Kernels are programming language specific processes that run independently and interact with the Jupyter Applications and their user interfaces. The student will have to decide which approach to consider with the objective of running different code snippets in different cells on a jupyter notebook using metacall.
+
+Additional information (if the student is high level):  
+To make the process of writing in different programming languages throughout the jupyter notebook easier, a language inference process can be added to avoid forcing the user to specify which language is using on each cell with libraries such as [linguist](https://github.com/github/linguist) or [guesslang](https://github.com/yoeo/guesslang).
+
+Resources:
+ - Jupyter architecture: https://jupyter.readthedocs.io/en/latest/projects/architecture/content-architecture.html
+ - Kernels: https://jupyter-client.readthedocs.io/en/latest/kernels.html#kernels
+ - Wrapper kernels: https://jupyter-client.readthedocs.io/en/latest/wrapperkernels.html
+ - List of existing kernels (examples) https://github.com/jupyter/jupyter/wiki/Jupyter-kernels
 
 
 ### Embedding LLVM (LLVM Loader)
