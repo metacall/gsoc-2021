@@ -55,7 +55,7 @@ Skills: C/C++ at least to interact with Metacall core
 Description:  
 Kernels are programming language specific processes that run independently and interact with the Jupyter Applications and their user interfaces. The student will have to decide which approach to consider with the objective of running different code snippets in different cells on a jupyter notebook using metacall.
 
-Additional information (if the student is high level):  
+Additional information (if there's enough time left):  
 To make the process of writing in different programming languages throughout the jupyter notebook easier, a language inference process can be added to avoid forcing the user to specify which language is using on each cell with libraries such as [linguist](https://github.com/github/linguist) or [guesslang](https://github.com/yoeo/guesslang).
 
 Resources:
