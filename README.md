@@ -138,6 +138,31 @@ Resources:
  - Pyston Install Documentation: https://pyston.readthedocs.io/en/stable/INSTALLING/
  - Example of MetaCall Benchmarks for Python Loader and Python C API: https://github.com/metacall/core/tree/develop/source/benchmarks/metacall_py_call_bench and https://github.com/metacall/core/tree/develop/source/benchmarks/metacall_py_c_api_bench
 
+
+### Embedding Java and Scala (loaders)
+
+Skills: C/C++
+
+Description:  
+Java Native Interface (JNI) is a foreign function interface programming framework that enables code running in a Java virtual machine (JVM) to call and be called by native applications, Metacall in this case. Currently there's a Java port using SWIG but we want to get rid of SWIG as a dependency and completely use JNI.
+
+Resources:  
+ - Java Native Interface: https://docs.oracle.com/javase/8/docs/technotes/guides/jni/
+ - Java port using SWIG: https://github.com/metacall/core/tree/master/source/ports/java_port
+ - Scala port: https://github.com/metacall/core/tree/master/source/ports/scala_port
+
+
+### Implement an error handling system (TBD)
+
+Skills: C
+
+Description:  
+To be defined
+
+Resources:  
+ - ...
+
+
 ## Find Us
 
 Telegram:
