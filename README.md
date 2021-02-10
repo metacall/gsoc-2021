@@ -116,7 +116,7 @@ Resources:
 
 ### PyPy Loader with Benchmarks against CPython (Python Loader)
 
-Skills: C++
+Skills: C/C++
 
 Description:
 PyPy is a fast, compliant alternative implementation of Python based on Just-In-Time compilation. Implementing it in MetaCall can provide higher performance which can benefit in faster execution of code, which is very important in environments like Cloud Computing or FaaS. The task will be to implement support to PyPy, and create benchmarks to document the performance improvements.
@@ -129,7 +129,7 @@ Resources:
 
 ### Embedding Java and Scala (Loaders)
 
-Skills: C/C++
+Skills: C/C++/Java
 
 Description:  
 Java Native Interface (JNI) is a foreign function interface programming framework that enables code running in a Java virtual machine (JVM) to call and be called by native applications, Metacall in this case. Currently there's a Java port using SWIG but we want to get rid of SWIG as a dependency and completely use JNI.
