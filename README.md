@@ -49,7 +49,6 @@ Resources:
  - LLVM Interpreter Example for Dynamic Compilation: https://github.com/llvm/llvm-project/blob/main/llvm/tools/lli/lli.cpp
  - How to list functions in LLVM (for introspection): https://github.com/mull-project/mull/blob/35f83655b04341b6260c5358168c4ac2da7bd86d/lib/Rust/RustTestFinder.cpp#L108
 
-
 ### Embedding Julia language (Julia Loader)
 
 Skills: C, C++ (optional) and Julia (at least its type system)
@@ -60,8 +59,6 @@ Julia is a modern programming language which features performance nearly as fast
 Resources: 
  - Julia Embedding Manual: https://docs.julialang.org/en/v1/manual/embedding/
  - Julia Dependency in CMake: https://github.com/JuliaInterop/libcxxwrap-julia/blob/master/FindJulia.cmake
-
-
 
 ### Embedding Formality Proof Assistant (Formality Loader)
 
@@ -74,6 +71,33 @@ Resources:
  - Formality GitHub Repository: https://github.com/moonad/Formality
  - Formality JavaScript Backend: https://github.com/moonad/Formality/tree/master/bin/js
  - MetaCall TypeScript Loader (can be used as example to implement the Formality Loader): https://github.com/metacall/core/tree/develop/source/loaders/ts_loader
+
+### Cross-Platform Builds
+
+Skills: C/C++, Guix, DevOps
+
+Description:
+MetaCall has multiple runtimes embedded on it and one of its objectives is to be as cross platform as possible. Each runtime has its own dependencies which create a huge dependency tree sometimes. This is a big complexity that is difficult to handle. Our first approach was to Dockerize all dependencies, building them manually, taking care of `LDFLAGS` in order to make the distributable portable at the same time. After this, we tried Guix to implement our build system and we achieved to compile MetaCall completely and make it completely self-contained (in Linux for amd64). This allows MetaCall to be installed even in a BusyBox and work properly without any other system dependency. We have started to support cross-platform builds with Guix but the development has stalled. The objective of this task is to achieve cross-platform builds for Linux, Windows and MacOs, and multiple hardware architectures. Guix supports cross-compiling but it is sometimes restricted due to its nature. One option we propose is to override the `gnu-build-system` of Guix by using Zig compiler and allow Cross-Compiling by means of its frontend. But, there are many other options to do it and we are open to them. Maybe if it can be achieved with a different package manager we are open to it too.
+
+Resources:
+ - Initial Docker Cross-Platform Build Approach: https://github.com/metacall/distributable/tree/feature/build-scratch/linux
+ - First steps in Cross-Platform Build for Guix: https://github.com/metacall/distributable/tree/feature/build-guix-cross
+ - Base implementation of Cross-Platform support in `metacall/distributable`: https://github.com/metacall/distributable/blob/f14cbdcfe3bcb85e0331172e0dbb512e2f21350a/Makefile#L31 and https://github.com/metacall/distributable/blob/f14cbdcfe3bcb85e0331172e0dbb512e2f21350a/scripts/build.sh#L23
+ - Guix Build Options Documentation: https://guix.gnu.org/manual/en/html_node/Additional-Build-Options.html
+ - Cross-compiling with Zig: https://andrewkelley.me/post/zig-cc-powerful-drop-in-replacement-gcc-clang.html
+
+### CLI Plugin Support
+
+Skills: C++, NodeJS (optional)
+
+Description: 
+MetaCall Core itself is based on an extensible plugin system architecture. This means that MetaCall is built on top of plugins that load other plugins. We can use this to extend any software with a plugin system easily, including MetaCall CLI itself. Providing plugin support in the MetaCall CLI will allow you to easily extend the REPL commands and add extra features to all the runtimes. For example, [the next task](https://github.com/metacall/gsoc-2021/blob/main/README.md#cli-security-through-seccomp-sandboxing) can be completely implemented with a plugin if MetaCall would have support for C/C++ Loader. The MetaCall CLI will have a path where all plugins are stored and those will be loaded and populated to the REPL. Some examples of plugins that can be implemented are the command `serve`, which can implement a HTTP server with NodeJS, to serve locally the functions loaded by MetaCall. Another plugin can be improving the REPL history and visualization by means of the REPL package of NodeJS.
+
+Resources:  
+- MetaCall CLI Source: https://github.com/metacall/core/tree/develop/source/cli/metacallcli
+- MetaCall CLI Install: https://github.com/metacall/install
+- NodeJS HTTP: https://nodejs.org/api/http.html
+- NodeJS REPL: https://nodejs.org/api/repl.html
 
 ### CLI Security Through `seccomp` (Sandboxing)
 
@@ -88,20 +112,6 @@ Resources:
  - Example of CMake find script for `libseccomp`: https://webkit-search.igalia.com/webkit/source/Source/cmake/FindLibseccomp.cmake
  - MetaCall CLI Source: https://github.com/metacall/core/tree/develop/source/cli/metacallcli
  - Deno Permission List: https://deno.land/manual/getting_started/permissions#permissions-list
-
-### Cross-Platform Builds
-
-Skills: C/C++/Guix DevOps
-
-Description:
-MetaCall has multiple runtimes embedded on it and one of its objectives is to be as cross platform as possible. Each runtime has its own dependencies which create a huge dependency tree sometimes. This is a big complexity that is difficult to handle. Our first approach was to Dockerize all dependencies, building them manually, taking care of `LDFLAGS` in order to make the distributable portable at the same time. After this, we tried Guix to implement our build system and we achieved to compile MetaCall completely and make it completely self-contained (in Linux for amd64). This allows MetaCall to be installed even in a BusyBox and work properly without any other system dependency. We have started to support cross-platform builds with Guix but the development has stalled. The objective of this task is to achieve cross-platform builds for Linux, Windows and MacOs, and multiple hardware architectures. Guix supports cross-compiling but it is sometimes restricted due to its nature. One option we propose is to override the `gnu-build-system` of Guix by using Zig compiler and allow Cross-Compiling by means of its frontend. But, there are many other options to do it and we are open to them. Maybe if it can be achieved with a different package manager we are open to it too.
-
-Resources:
- - Initial Docker Cross-Platform Build Approach: https://github.com/metacall/distributable/tree/feature/build-scratch/linux
- - First steps in Cross-Platform Build for Guix: https://github.com/metacall/distributable/tree/feature/build-guix-cross
- - Base implementation of Cross-Platform support in `metacall/distributable`: https://github.com/metacall/distributable/blob/f14cbdcfe3bcb85e0331172e0dbb512e2f21350a/Makefile#L31 and https://github.com/metacall/distributable/blob/f14cbdcfe3bcb85e0331172e0dbb512e2f21350a/scripts/build.sh#L23
- - Guix Build Options Documentation: https://guix.gnu.org/manual/en/html_node/Additional-Build-Options.html
- - Cross-compiling with Zig: https://andrewkelley.me/post/zig-cc-powerful-drop-in-replacement-gcc-clang.html
 
 ### Packaging .NET Core with Guix (NonGuix)
 
@@ -126,10 +136,9 @@ Resources:
 - Embedding PyPy: https://doc.pypy.org/en/improve-docs/embedding.html
  - Example of MetaCall Benchmarks for Python Loader and Python C API: https://github.com/metacall/core/tree/develop/source/benchmarks/metacall_py_call_bench and https://github.com/metacall/core/tree/develop/source/benchmarks/metacall_py_c_api_bench
 
-
 ### Embedding Java and Scala (Loaders)
 
-Skills: C/C++/Java
+Skills: C/C++, Java
 
 Description:  
 Java Native Interface (JNI) is a foreign function interface programming framework that enables code running in a Java virtual machine (JVM) to call and be called by native applications, Metacall in this case. Currently there's a Java port using SWIG but we want to get rid of SWIG as a dependency and completely use JNI.
@@ -138,7 +147,6 @@ Resources:
  - Java Native Interface: https://docs.oracle.com/javase/8/docs/technotes/guides/jni/
  - Java port using SWIG: https://github.com/metacall/core/tree/master/source/ports/java_port
  - Scala port: https://github.com/metacall/core/tree/master/source/ports/scala_port
-
 
 ### Implement an Error Handling System
 
@@ -153,7 +161,7 @@ Resources:
 
 ### Jupyter MetaCall Kernel
 
-Skills: C/C++ at least to interact with Metacall core
+Skills: C/C++ at least to interact with Metacall Core
 
 Description:  
 Kernels are programming language specific processes that run independently and interact with the Jupyter Applications and their user interfaces. The student will have to decide which approach to consider with the objective of running different code snippets in different cells on a jupyter notebook using metacall.
