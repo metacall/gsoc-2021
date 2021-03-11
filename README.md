@@ -60,17 +60,18 @@ Resources:
  - Julia Embedding Manual: https://docs.julialang.org/en/v1/manual/embedding/
  - Julia Dependency in CMake: https://github.com/JuliaInterop/libcxxwrap-julia/blob/master/FindJulia.cmake
 
-### Embedding Formality Proof Assistant (Formality Loader)
+### Embedding Kind Proof Assistant (Kind Loader)
 
 Skills: JavaScript
 
 Description:  
-Formality is a modern programming language that allows the developer to write formal proofs to validate the code. MetaCall has already very good support for JavaScript and formality could be implemented on top of it due to it having a [JavaScript compiler](https://github.com/moonad/FormCoreJS/blob/master/FmcToJs.js). The already implemented TypeScript Loader can be an example to follow due to TypeScript being also compiled to JavaScript. Applications would benefit from calling Formality with MetaCall, getting easy access to formal verification without having to reimplement much of the business logic and being able to verify single functions easily.
+Kind is a modern programming language that allows the developer to write formal proofs to validate the code. MetaCall has already very good support for JavaScript and formality could be implemented on top of it due to it having a [JavaScript compiler](https://github.com/moonad/FormCoreJS/blob/master/FmcToJs.js). The already implemented TypeScript Loader can be an example to follow due to TypeScript being also compiled to JavaScript. Applications would benefit from calling Kind with MetaCall, getting easy access to formal verification without having to reimplement much of the business logic and being able to verify single functions easily.
 
 Resources:
- - Formality GitHub Repository: https://github.com/moonad/Formality
- - Formality JavaScript Backend: https://github.com/moonad/Formality/tree/master/bin/js
- - MetaCall TypeScript Loader (can be used as example to implement the Formality Loader): https://github.com/metacall/core/tree/develop/source/loaders/ts_loader
+ - Kind GitHub Repository: https://github.com/uwu-tech/Kind
+ - Kind JavaScript Backend: https://github.com/uwu-tech/Kind/tree/master/bin/js
+ - MetaCall TypeScript Loader (can be used as example to implement the Kind Loader): https://github.com/metacall/core/tree/develop/source/loaders/ts_loader
+ - MetaCall Kind Loader Base: https://github.com/metacall/core/blob/cd843ef37fe2efcfb33bbb64dccf0973b52e8493/source/loaders/kind_loader/parsing_kind_terms.js
 
 ### Cross-Platform Builds
 
