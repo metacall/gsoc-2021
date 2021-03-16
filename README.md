@@ -62,7 +62,7 @@ Resources:
 
 ### Embedding Kind Proof Assistant (Kind Loader)
 
-Skills: JavaScript
+Skills: Formal Verification / Proof Assistants, JavaScript (and C/C++ is a plus)
 
 Description:  
 Kind is a modern programming language that allows the developer to write formal proofs to validate the code. MetaCall has already very good support for JavaScript and formality could be implemented on top of it due to it having a [JavaScript compiler](https://github.com/moonad/FormCoreJS/blob/master/FmcToJs.js). The already implemented TypeScript Loader can be an example to follow due to TypeScript being also compiled to JavaScript. Applications would benefit from calling Kind with MetaCall, getting easy access to formal verification without having to reimplement much of the business logic and being able to verify single functions easily.
